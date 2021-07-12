@@ -1,0 +1,97 @@
+*{
+    padding: auto;
+    
+}
+
+.logo{
+    position: absolute;
+width: 255px;
+height: 119px;
+left: 100px;
+top: 50px;
+
+background: rgba(196, 196, 196, 0.13);
+}
+
+.menu{
+    position: absolute;
+width: 861px;
+height: 65px;
+left: 508px;
+top: 80px;
+
+background: #F2DADA;
+}
+
+.menu-items{
+    display: inline-flex;
+}
+
+.item{
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    width: 120px;
+    height: 65px;
+    font-size: 20px;
+
+    
+}
+.item-active{
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    width: 120px;
+    height: 65px;
+    position: absolute;
+    font-size: 20px;
+
+background: #A58484;
+}
+
+.search{
+    position: absolute;
+width: 200px;
+height: 50px;
+left: 1450px;
+top: 90px;
+
+background: #FEF6F6;
+border-radius: 10px;
+}
+
+.cart{
+    position: absolute;
+
+
+left: 1700px;
+top: 95px;
+
+}
+
+.like{
+    position: absolute;
+
+
+    left: 1750px;
+    top: 95px;
+    
+
+}
+
+.logout{
+    position: absolute;
+
+
+    left: 1800px;
+    top: 95px;
+    
+
+}
+
+.logome{
+    position: absolute;
+    top: 27px;
+
+}
+
