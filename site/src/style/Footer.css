@@ -1,0 +1,8 @@
+.footer{
+    
+width: 1905px;
+height: 600px;
+margin-top: 350px;
+
+background: linear-gradient(180deg, #7A6565 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #847A7A 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
+}

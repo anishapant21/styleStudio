@@ -1,0 +1,13 @@
+.slider{
+    position: absolute;
+width: 1605px;
+height: 690px;
+left: 160px;
+top: 250px;
+
+background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg) ;
+background-size: cover;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 83px;
+}

@@ -1,0 +1,24 @@
+.heading{
+    position: absolute;
+width: 462px;
+height: 82px;
+left: 807px;
+top: 1020px;
+
+font-family: Noto Serif SC;
+font-style: normal;
+font-weight: 200;
+font-size: 60px;
+line-height: 92px;
+
+color: #000000;
+
+}
+
+.slick-arrow{
+    background-color: bisque;
+    
+    
+    
+}
+
