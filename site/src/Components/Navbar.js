@@ -6,8 +6,22 @@ import "../style/Navbar.css"
 import {FaSearch, FaShoppingCart, FaRegHeart} from "react-icons/fa"
 import {FiLogOut} from "react-icons/fi"
 import logo from '../logo.png'
+import {useHistory} from "react-router-dom"
 
 const Navbar = ({filterItems, categories}) =>{
+    const history=useHistory();
+    const clickHome =()=>{
+        history.push({
+            pathname:'/'
+        });
+    };
+
+    const clickFilter=(d)=>{
+        history.push({
+            pathname:'/filter',
+            state:{filterMe: d}
+        });
+    };
     return(
         <Flex>
             <Box className="logo">
@@ -16,12 +30,12 @@ const Navbar = ({filterItems, categories}) =>{
 <Spacer />
         <Box className="menu">
             <div className="menu-items">
-                <div className="item-active" onClick={()=>filterItems('all')}>Home</div>
-                <div className="item" onClick={()=>filterItems('all')}>Dress</div>
-                <div className="item"  onClick={()=>filterItems('pant')}>Pants</div>
-                <div className="item"  onClick={()=>filterItems('shoes')}>Shoes</div>
-                <div className="item"  onClick={()=>filterItems('access')}>Accessories</div>
-                <div className="item"  onClick={()=>filterItems('all')}>Bags</div>
+                <div className="item-active" onClick={()=>clickHome()}>Home</div>
+                <div className="item" onClick={()=>clickFilter('all')}>Dress</div>
+                <div className="item"  onClick={()=>clickFilter('pant')}>Pants</div>
+                <div className="item"  onClick={()=>clickFilter('shoes')}>Shoes</div>
+                <div className="item"  onClick={()=>clickFilter('access')}>Accessories</div>
+                <div className="item"  onClick={()=>clickFilter('all')}>Bags</div>
                 <div className="item">New</div>
                 <div className="item">Sale</div>
             </div>
