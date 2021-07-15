@@ -46,11 +46,25 @@ line-height: 52px;
 
 color: #443d3d;
 }
-.heartme{
+.heartisempty{
     margin-left:80px ;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    
+    
+}
+.heartisempty:hover{
+    color: brown;
+    fill: burlywood;
+}
+
+.heartisfull{
+    margin-left:80px ;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    fill:palevioletred;
     
 }
 
