@@ -1,81 +1,72 @@
-.eachitem{
-   
-    position: absolute;
-width: 380px;
-height: 496px;
-filter: drop-shadow(4px 12px 4px rgba(0, 0, 0, 0.25));
-padding-top: 200px;
+.eachitem {
+  position: absolute;
+  width: 380px;
+  height: 496px;
+  filter: drop-shadow(4px 12px 4px rgba(0, 0, 0, 0.25));
+  padding-top: 200px;
 }
 
-.itemme{
-    display: flex;
+.itemme {
+  display: flex;
 
-
-    padding-top: 100px;
-    padding-left: 80px ;
-    
+  padding-top: 100px;
+  padding-left: 80px;
 }
 
-.boxme{
-    padding-top: 200px;
-    padding-left:30px ;
-    width: 380px;
-height: 496px;
-
+.boxme {
+  padding-top: 200px;
+  padding-left: 30px;
+  width: 380px;
+  height: 496px;
 }
 
-.imageme{
-    object-fit: cover;
-    min-width: 380px;
-    min-height: 496px;
-    max-height:496px ;
-    filter: drop-shadow(4px 12px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-
+.imagemeHere {
+  object-fit: cover;
+  min-width: 380px;
+  min-height: 496px;
+  max-height: 496px;
+  filter: drop-shadow(4px 12px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
 }
 
-.price{
-    padding-left: 130px;
-    padding-top:5px ;
-    display: flex;
-    font-family: Noto Sans KR;
-font-style: normal;
-font-weight: normal;
-font-size: 25px;
-line-height: 52px;
+.price {
+  padding-left: 130px;
+  padding-top: 5px;
+  display: flex;
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 52px;
 
-color: #443d3d;
+  color: #443d3d;
 }
-.heartisempty{
-    margin-left:80px ;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    
-    
+.heartisempty {
+  margin-left: 80px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
-.heartisempty:hover{
-    color: brown;
-    fill: burlywood;
+.heartisempty:hover {
+  color: brown;
+  fill: burlywood;
 }
 
-.heartisfull{
-    margin-left:80px ;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    fill:palevioletred;
-    
+.heartisfull {
+  margin-left: 80px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: palevioletred;
 }
 
-.name{
-    font-family: 'Rajdhani';
-font-style: normal;
-font-weight: normal;
-font-size: 25px;
-line-height: 2px;
+.name {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 2px;
 
-color: #000000;
-text-align: center;
-
+  color: #000000;
+  text-align: center;
 }

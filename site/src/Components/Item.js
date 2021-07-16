@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import { SimpleGrid, Box } from "@chakra-ui/react";
 import "../style/Item.css";
 import { useHistory } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
+import CartContext from "../Context/Cart/CartContext";
+
+export const UserContext = createContext();
 
 const Item = ({ img, title, price, id }) => {
+  const { addToCart, cartItems } = useContext(CartContext);
+
   const [heartClick, setHeartClick] = useState(false);
   const rupee = `RS ${price}`;
   const history = useHistory();
@@ -17,8 +22,20 @@ const Item = ({ img, title, price, id }) => {
   };
   const callToMakeYourHeart = () => {
     setHeartClick(!heartClick);
+    addToCart(title);
   };
   let renderHeart;
+
+  useEffect(() => {
+    console.log("I came");
+    const countMeIn = cartItems.filter((it) => it === title);
+    console.log(countMeIn);
+    if (countMeIn.length === 1) {
+      console.log("mein yeha aaya tha");
+      setHeartClick(true);
+    }
+  }, []);
+
   if (heartClick === false) {
     renderHeart = "heartisempty";
   } else {
@@ -32,14 +49,14 @@ const Item = ({ img, title, price, id }) => {
           onClick={() => {
             clickDetail(title);
           }}
-          className="imageme"
+          className="imagemeHere"
           src={img}
         />
         <div className="price">
           {rupee}
 
           <FiHeart
-            onClick={() => callToMakeYourHeart()}
+            onClick={() => callToMakeYourHeart(title)}
             className={renderHeart}
           />
         </div>

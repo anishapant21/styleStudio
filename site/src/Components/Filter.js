@@ -28,7 +28,6 @@ const Filter = () => {
   return (
     <div
       style={{
-        height: "2990px",
 
         background:
           "linear-gradient(180deg, #F2E6E6 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #F4E7E7 0%, rgba(255, 255, 255, 0) 100%), #DDCDCD" }}

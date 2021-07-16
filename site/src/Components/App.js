@@ -5,6 +5,7 @@ import Filter from "./Filter";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
+import WishList from "./WishList";
 
 const App = () => {
   return (
@@ -19,6 +20,12 @@ const App = () => {
         <Route path="/productdetail">
           <ChakraProvider>
             <ProductDetail />
+          </ChakraProvider>
+        </Route>
+
+        <Route path="/wishlist">
+          <ChakraProvider>
+            <WishList />
           </ChakraProvider>
         </Route>
 

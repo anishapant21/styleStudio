@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import data from "../Data/data.js";
 import { Box, SimpleGrid } from "@chakra-ui/react";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 const ProductDetail = () => {
   const [dataOfProduct, setDataOfProduct] = useState([{}]);
@@ -47,39 +48,54 @@ const ProductDetail = () => {
       </span>
 
       <div className="detail">
-        <Breadcrumb>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="#">Home</BreadcrumbLink>
-          </BreadcrumbItem>
+        <div className="breadcrumb">
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="#">Home</BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbItem>
-            <BreadcrumbLink href="#">
-              {dataOfProduct[0].category}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="#">
+                {dataOfProduct[0].category}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="#">{dataOfProduct[0].title}</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <div className="allimagehere">
-          <div>
-            <Box className="imageHere">
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink href="#">{dataOfProduct[0].title}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+        <div className="alldetailshere">
+          <div className="bigImage">
+            <Box className="insidebox">
               <img src={dataOfProduct[0].img} />
             </Box>
           </div>
-          <div>
+          <div className="smallImages">
             <SimpleGrid columns={1} spacing={10}>
-              <Box width="180px">
-                <img src="/assets/images/00434231-01 (3).jpg" />
+              <Box>
+                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
               </Box>
-              <Box width="180px">
-                <img src="/assets/images/00434231-01 (3).jpg" />
+              <Box>
+                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
               </Box>
-              <Box width="180px">
-                <img src="/assets/images/00434231-01 (3).jpg" />
+              <Box>
+                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
               </Box>
             </SimpleGrid>
+          </div>
+          <div className="writtendetails">
+            <span className="iamheader">{dataOfProduct[0].title}</span>
+            <div className="stars">
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiOutlineStar size={20} />
+            </div>
+            <div className="button">
+              <button>Add to cart</button>
+            </div>
           </div>
         </div>
       </div>

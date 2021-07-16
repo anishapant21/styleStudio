@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Flex, Spacer, Box } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { IconButton } from "@chakra-ui/react";
@@ -7,8 +7,10 @@ import { FaSearch, FaShoppingCart, FaRegHeart } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import logo from "../logo.png";
 import { useHistory } from "react-router-dom";
+import CartContext from "../Context/Cart/CartContext";
 
 const Navbar = ({ filterItems, categories }) => {
+  const { cartItems } = useContext(CartContext);
   const history = useHistory();
   const clickHome = () => {
     history.push({
@@ -22,6 +24,13 @@ const Navbar = ({ filterItems, categories }) => {
       state: { filterMe: d },
     });
   };
+
+  const takeMeToWishLand = () => {
+    history.push({
+      pathname: "/wishlist",
+    });
+  };
+
   return (
     <Flex>
       <Box className="logo">
@@ -65,11 +74,18 @@ const Navbar = ({ filterItems, categories }) => {
         </div>
       </Box>
       <Box>
-        <div className="like">
+        <div onClick={() => takeMeToWishLand()} className="like">
           <IconButton>
             <FaRegHeart size="30" />
           </IconButton>
         </div>
+      </Box>
+      <Box>
+        {cartItems.length > 0 && (
+          <div className="itemCount">
+            <span>{cartItems.length}</span>
+          </div>
+        )}
       </Box>
     </Flex>
   );
