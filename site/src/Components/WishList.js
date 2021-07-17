@@ -9,15 +9,13 @@ import WishMenu from "./WishMenu";
 const WishList = () => {
   const [dataTosendAgain, setDataToSendAgain] = useState([{}]);
 
-  const { cartItems } = useContext(CartContext);
-  console.log(cartItems);
+  const { cartItems, wishItems } = useContext(CartContext);
 
   let newData = [];
   useEffect(() => {
     console.log("i was here");
-    for (let i = 0; i < cartItems.length; i++) {
-      console.log(cartItems[i]);
-      newData.push(data.filter((dat) => dat.title === cartItems[i]));
+    for (let i = 0; i < wishItems.length; i++) {
+      newData.push(data.filter((dat) => dat.title === wishItems[i]));
     }
     setDataToSendAgain(newData);
   }, []);

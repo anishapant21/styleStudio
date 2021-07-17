@@ -4,13 +4,17 @@ import "../style/Item.css";
 import { useHistory } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import CartContext from "../Context/Cart/CartContext";
+import Home from "./Home";
+import { ADD_TO_CART } from "../Context/Types";
 
 export const UserContext = createContext();
 
 const Item = ({ img, title, price, id }) => {
-  const { addToCart, cartItems, removeItem } = useContext(CartContext);
+  const { cartItems, removeItemWish, addToWish, wishItems, addToCart } =
+    useContext(CartContext);
 
   const [heartClick, setHeartClick] = useState(false);
+  const [cartButton, setCartButton] = useState("Add to Cart");
   const rupee = `RS ${price}`;
   const history = useHistory();
   const clickDetail = (e) => {
@@ -22,26 +26,37 @@ const Item = ({ img, title, price, id }) => {
   };
   const callToMakeYourHeart = () => {
     setHeartClick(!heartClick);
-    const isItemInCart = cartItems.filter((itemInCart) => itemInCart === title);
+    const isItemInCart = wishItems.filter((itemInCart) => itemInCart === title);
     console.log("am i in cart", isItemInCart);
     if (isItemInCart.length === 1) {
-      removeItem(title);
+      removeItemWish(title);
     } else {
-      addToCart(title);
+      addToWish(title);
     }
-    //addToCart(title);
   };
   let renderHeart;
 
   useEffect(() => {
-    console.log("I came");
-    const countMeIn = cartItems.filter((it) => it === title);
+    const countMeIn = wishItems.filter((it) => it === title);
     console.log(countMeIn);
     if (countMeIn.length === 1) {
-      console.log("mein yeha aaya tha");
       setHeartClick(true);
     }
   }, []);
+
+  const callAddToCart = (title) => {
+    setCartButton("Added");
+    if (cartButton === "Add to Cart") {
+      addToCart(title);
+    }
+  };
+
+  useEffect(() => {
+    const countMeInCart = cartItems.filter((ite) => ite === title);
+    if (countMeInCart.length === 1) {
+      setCartButton("Added");
+    }
+  });
 
   if (heartClick === false) {
     renderHeart = "heartisempty";
@@ -52,22 +67,39 @@ const Item = ({ img, title, price, id }) => {
   return (
     <>
       <Box className="boxme">
-        <img
-          onClick={() => {
-            clickDetail(title);
-          }}
-          className="imagemeHere"
-          src={img}
-        />
-        <div className="price">
-          {rupee}
-
-          <FiHeart
-            onClick={() => callToMakeYourHeart(title)}
-            className={renderHeart}
-          />
+        <div className="card">
+          <img className="imagemeHere" src={img} />
+          <div className="info">
+            <button
+              onClick={() => {
+                callAddToCart(title);
+              }}
+              className="cartButton"
+            >
+              {cartButton}
+            </button>
+            <button
+              onClick={() => {
+                clickDetail(title);
+              }}
+              className="cartButton"
+            >
+              View Details
+            </button>
+          </div>
         </div>
-        <div className="name">{title}</div>
+        <div className="contentMet">
+          <div>
+            <div className="price">{rupee}</div>
+            <div className="name">{title}</div>
+          </div>
+          <div>
+            <FiHeart
+              onClick={() => callToMakeYourHeart(title)}
+              className={renderHeart}
+            />
+          </div>
+        </div>
       </Box>
     </>
   );

@@ -83,7 +83,7 @@
   top: 27px;
 }
 
-.itemCount {
+.itemCountWish {
   position: relative;
 
   height: 20px;
@@ -92,10 +92,29 @@
   top: 400%;
   right: 450%;
   transform: translate(-50%, -50%);
-  background-color: #85cb33;
+  background-color: #577399;
   justify-content: center;
   align-items: center;
-  color: #212121;
+  color: white;
+  font-size: 14px;
+  border-radius: 400px;
+  transition: all ease 1s;
+  z-index: 1;
+}
+
+.itemCountCart {
+  position: relative;
+
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  top: 400%;
+  right: 850%;
+  transform: translate(-50%, -50%);
+  background-color: #fe5f55;
+  justify-content: center;
+  align-items: center;
+  color: white;
   font-size: 14px;
   border-radius: 400px;
   transition: all ease 1s;

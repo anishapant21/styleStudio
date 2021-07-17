@@ -1,25 +1,24 @@
-import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from "../Types";
+import { ADD_TO_CART, ADD_TO_WISH, REMOVE_ITEM_WISH } from "../Types";
 
 const CartReducer = (state, action) => {
   switch (action.type) {
-    case SHOW_HIDE_CART: {
+    case ADD_TO_WISH: {
       return {
         ...state,
-        showCart: !state.showCart,
+        wishItems: [...state.wishItems, action.payload],
       };
     }
     case ADD_TO_CART: {
-      console.log(action.payload);
       return {
         ...state,
         cartItems: [...state.cartItems, action.payload],
       };
     }
-    case REMOVE_ITEM: {
+    case REMOVE_ITEM_WISH: {
       console.log(action.payload);
       return {
         ...state,
-        cartItems: state.cartItems.filter((item) => item != action.payload),
+        wishItems: state.wishItems.filter((item) => item != action.payload),
       };
     }
     default:

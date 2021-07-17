@@ -1,12 +1,12 @@
 import { useReducer } from "react";
 import CartContext from "./CartContext";
 import CartReducer from "./CartReducer";
-import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from "../Types";
+import { ADD_TO_WISH, ADD_TO_CART, REMOVE_ITEM_WISH } from "../Types";
 
 const CartState = ({ children }) => {
   const initialState = {
-    showCart: false,
     cartItems: [],
+    wishItems: [],
   };
 
   const [state, dispatch] = useReducer(CartReducer, initialState);
@@ -15,12 +15,12 @@ const CartState = ({ children }) => {
     dispatch({ type: ADD_TO_CART, payload: item });
   };
 
-  const showHideCart = () => {
-    dispatch({ type: SHOW_HIDE_CART });
+  const addToWish = (item) => {
+    dispatch({ type: ADD_TO_WISH, payload: item });
   };
 
-  const removeItem = (item) => {
-    dispatch({ type: REMOVE_ITEM, payload: item });
+  const removeItemWish = (item) => {
+    dispatch({ type: REMOVE_ITEM_WISH, payload: item });
   };
 
   return (
@@ -28,9 +28,10 @@ const CartState = ({ children }) => {
       value={{
         showCart: state.showCart,
         cartItems: state.cartItems,
+        wishItems: state.wishItems,
         addToCart,
-        showHideCart,
-        removeItem,
+        addToWish,
+        removeItemWish,
       }}
     >
       {children}
