@@ -9,15 +9,17 @@ const CartReducer = (state, action) => {
       };
     }
     case ADD_TO_CART: {
+      console.log(action.payload);
       return {
         ...state,
         cartItems: [...state.cartItems, action.payload],
       };
     }
     case REMOVE_ITEM: {
+      console.log(action.payload);
       return {
         ...state,
-        cartItems: state.cartItems.filter((item) => item.id != action.payload),
+        cartItems: state.cartItems.filter((item) => item != action.payload),
       };
     }
     default:

@@ -4,11 +4,13 @@ import Navbar from "./Navbar";
 import CartContext from "../Context/Cart/CartContext";
 import data from "../Data/data.js";
 import FilterMenu from "./FilterMenu";
+import WishMenu from "./WishMenu";
 
 const WishList = () => {
   const [dataTosendAgain, setDataToSendAgain] = useState([{}]);
+
   const { cartItems } = useContext(CartContext);
-  console.log(cartItems.length);
+  console.log(cartItems);
 
   let newData = [];
   useEffect(() => {
@@ -19,9 +21,13 @@ const WishList = () => {
     }
     setDataToSendAgain(newData);
   }, []);
-  console.log("i am data to send again", dataTosendAgain);
+  console.log(dataTosendAgain);
 
-  console.log("I am the boss", newData);
+  const newDataList = [];
+  for (let i = 0; i < dataTosendAgain.length; i++) {
+    newDataList.push(dataTosendAgain[i][0]);
+  }
+  console.log("I am new baby", newDataList);
 
   return (
     <div
@@ -31,7 +37,7 @@ const WishList = () => {
       }}
     >
       <Navbar />
-      <FilterMenu items={dataTosendAgain} />
+      <WishMenu items={newDataList} />
 
       <Footer />
     </div>

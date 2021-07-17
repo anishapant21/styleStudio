@@ -8,7 +8,7 @@ import CartContext from "../Context/Cart/CartContext";
 export const UserContext = createContext();
 
 const Item = ({ img, title, price, id }) => {
-  const { addToCart, cartItems } = useContext(CartContext);
+  const { addToCart, cartItems, removeItem } = useContext(CartContext);
 
   const [heartClick, setHeartClick] = useState(false);
   const rupee = `RS ${price}`;
@@ -22,7 +22,14 @@ const Item = ({ img, title, price, id }) => {
   };
   const callToMakeYourHeart = () => {
     setHeartClick(!heartClick);
-    addToCart(title);
+    const isItemInCart = cartItems.filter((itemInCart) => itemInCart === title);
+    console.log("am i in cart", isItemInCart);
+    if (isItemInCart.length === 1) {
+      removeItem(title);
+    } else {
+      addToCart(title);
+    }
+    //addToCart(title);
   };
   let renderHeart;
 
