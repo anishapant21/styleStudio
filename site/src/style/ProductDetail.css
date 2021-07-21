@@ -7,7 +7,7 @@
 
 .detail {
   margin-top: 320px;
-  margin-left: 70px;
+  margin-left: 180px;
 }
 
 .alldetailshere {
@@ -50,4 +50,58 @@
 
 .starts-fill {
   fill: black;
+}
+
+.writtendetails {
+  display: flex;
+}
+
+.hareyy {
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+
+.heartisempty {
+  position: absolute;
+  margin-right: 10px;
+  margin-left: 80px;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.heartisempty:hover {
+  color: brown;
+  fill: burlywood;
+}
+
+.heartisfull {
+  margin-left: 80px;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: palevioletred;
+}
+
+.desc {
+  width: 400px;
+  margin-top: 20px;
+}
+
+.writeprice {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.desc .p {
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+.writextra {
+  margin-top: 20px;
 }

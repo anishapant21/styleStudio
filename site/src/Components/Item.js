@@ -4,8 +4,8 @@ import "../style/Item.css";
 import { useHistory } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import CartContext from "../Context/Cart/CartContext";
-import Home from "./Home";
-import { ADD_TO_CART } from "../Context/Types";
+import data from "../Data/data.js";
+import WishButton from "./WishButton";
 
 export const UserContext = createContext();
 
@@ -24,45 +24,50 @@ const Item = ({ img, title, price, id }) => {
       state: { productName: e },
     });
   };
-  const callToMakeYourHeart = () => {
-    setHeartClick(!heartClick);
-    const isItemInCart = wishItems.filter((itemInCart) => itemInCart === title);
-    console.log("am i in cart", isItemInCart);
-    if (isItemInCart.length === 1) {
-      removeItemWish(title);
-    } else {
-      addToWish(title);
-    }
-  };
-  let renderHeart;
 
-  useEffect(() => {
-    const countMeIn = wishItems.filter((it) => it === title);
-    console.log(countMeIn);
-    if (countMeIn.length === 1) {
-      setHeartClick(true);
-    }
-  }, []);
+  // const callToMakeYourHeart = () => {
+  //   setHeartClick(!heartClick);
+  //   const isItemInCart = wishItems.filter(
+  //     (itemInCart) => itemInCart.title === title
+  //   );
+  //   console.log("am i in cart", isItemInCart);
+  //   const dataProduct = data.filter((dat) => dat.title === title);
+  //   if (isItemInCart.length === 1) {
+  //     removeItemWish(dataProduct[0]);
+  //   } else {
+  //     addToWish(dataProduct[0]);
+  //   }
+  // };
+  // let renderHeart;
+
+  // useEffect(() => {
+  //   const countMeIn = wishItems.filter((it) => it.title === title);
+  //   console.log(countMeIn);
+  //   if (countMeIn.length === 1) {
+  //     setHeartClick(true);
+  //   }
+  // }, []);
 
   const callAddToCart = (title) => {
     setCartButton("Added");
+    const dataProductCart = data.filter((dat) => dat.title === title);
     if (cartButton === "Add to Cart") {
-      addToCart(title);
+      addToCart(dataProductCart[0]);
     }
   };
 
   useEffect(() => {
-    const countMeInCart = cartItems.filter((ite) => ite === title);
+    const countMeInCart = cartItems.filter((ite) => ite.title === title);
     if (countMeInCart.length === 1) {
       setCartButton("Added");
     }
   });
 
-  if (heartClick === false) {
-    renderHeart = "heartisempty";
-  } else {
-    renderHeart = "heartisfull";
-  }
+  // if (heartClick === false) {
+  //   renderHeart = "heartisempty";
+  // } else {
+  //   renderHeart = "heartisfull";
+  // }
 
   return (
     <>
@@ -94,10 +99,7 @@ const Item = ({ img, title, price, id }) => {
             <div className="name">{title}</div>
           </div>
           <div>
-            <FiHeart
-              onClick={() => callToMakeYourHeart(title)}
-              className={renderHeart}
-            />
+            <WishButton title={title} />
           </div>
         </div>
       </Box>
@@ -106,3 +108,10 @@ const Item = ({ img, title, price, id }) => {
 };
 
 export default Item;
+
+{
+  /* <FiHeart
+onClick={() => callToMakeYourHeart(title)}
+className={renderHeart}
+/> */
+}

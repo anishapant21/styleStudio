@@ -1,0 +1,44 @@
+.product-info {
+  width: 100%;
+
+  /* background-color: lavender; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.image-image {
+  padding-top: 5px;
+}
+
+.title-info {
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.icon-plus-minus {
+  display: flex;
+  padding-top: 40px;
+}
+
+.icon-minus {
+  padding-right: 10px;
+}
+.icon-plus {
+  padding-left: 10px;
+}
+
+.input-box {
+  width: 30px;
+  text-align: center;
+  align-items: center;
+  border: 1px solid rgb(101, 107, 107);
+}
+
+.price-info {
+  padding-top: 40px;
+}
+
+.delete-info {
+  padding-top: 40px;
+}

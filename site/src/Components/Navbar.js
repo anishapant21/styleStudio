@@ -31,6 +31,12 @@ const Navbar = ({ filterItems, categories }) => {
     });
   };
 
+  const takeMeToCheckout = () => {
+    history.push({
+      pathname: "/checkout",
+    });
+  };
+
   return (
     <Flex>
       <Box className="logo">
@@ -67,7 +73,7 @@ const Navbar = ({ filterItems, categories }) => {
         </div>
       </Box>
       <Box>
-        <div className="cart">
+        <div onClick={() => takeMeToCheckout()} className="cart">
           <IconButton>
             <FaShoppingCart size="30" color="#514663" />
           </IconButton>

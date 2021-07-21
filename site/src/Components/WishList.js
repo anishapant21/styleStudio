@@ -11,21 +11,24 @@ const WishList = () => {
 
   const { cartItems, wishItems } = useContext(CartContext);
 
-  let newData = [];
-  useEffect(() => {
-    console.log("i was here");
-    for (let i = 0; i < wishItems.length; i++) {
-      newData.push(data.filter((dat) => dat.title === wishItems[i]));
-    }
-    setDataToSendAgain(newData);
-  }, []);
-  console.log(dataTosendAgain);
+  // let newData = [];
+  // useEffect(() => {
+  //   console.log("i was here");
+  //   for (let i = 0; i < wishItems.length; i++) {
+  //     newData.push(data.filter((dat) => dat.title === wishItems[i]));
+  //   }
+  //   setDataToSendAgain(newData);
+  // }, []);
+  // console.log(dataTosendAgain);
 
-  const newDataList = [];
-  for (let i = 0; i < dataTosendAgain.length; i++) {
-    newDataList.push(dataTosendAgain[i][0]);
-  }
-  console.log("I am new baby", newDataList);
+  // const newDataList = [];
+  // for (let i = 0; i < dataTosendAgain.length; i++) {
+  //   newDataList.push(dataTosendAgain[i][0]);
+  // }
+  // console.log("I am new baby", newDataList);
+
+  const newDataList = wishItems;
+  console.log("I am new data list", newDataList);
 
   return (
     <div

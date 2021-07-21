@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext, useContext } from "react";
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import "../style/ProductDetail.css";
+import CartContext from "../Context/Cart/CartContext";
+import { FaShoppingCart } from "react-icons/fa";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,6 +14,9 @@ import {
 import data from "../Data/data.js";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { FiHeart } from "react-icons/fi";
+import WishButton from "./WishButton";
+import CartButton from "./CartButton";
 
 const ProductDetail = () => {
   const [dataOfProduct, setDataOfProduct] = useState([{}]);
@@ -85,16 +90,37 @@ const ProductDetail = () => {
             </SimpleGrid>
           </div>
           <div className="writtendetails">
-            <span className="iamheader">{dataOfProduct[0].title}</span>
-            <div className="stars">
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiOutlineStar size={20} />
+            <div>
+              <span className="iamheader">{dataOfProduct[0].title}</span>
+              <div className="stars">
+                <AiFillStar size={20} />
+                <AiFillStar size={20} />
+                <AiFillStar size={20} />
+                <AiFillStar size={20} />
+                <AiOutlineStar size={20} />
+              </div>
+              <div className="writeprice">RS {dataOfProduct[0].price}</div>
+              <div className="desc">
+                Let's groove tonight. This dress features a V neckline, relaxed,
+                midi silhouette, button down closure, split at front, racerback,
+                and wave print throughout. Team with your favourite dancing
+                shoes.
+                <p className="writextra"> Shell: 100% rayon </p>{" "}
+                <p>Lining: 100% polyester</p>
+                <p style={{ paddingTop: "20px" }}>Size: M, L, XL</p>
+              </div>
+              <div style={{ paddingTop: "30px", display: "flex" }}>
+                <div>
+                  <FaShoppingCart size="30" color="#514663" />
+                </div>
+                <div>
+                  <CartButton title={dataOfProduct[0].title} />
+                </div>
+              </div>
             </div>
-            <div className="button">
-              <button>Add to cart</button>
+
+            <div>
+              <WishButton title={dataOfProduct[0].title} />
             </div>
           </div>
         </div>
