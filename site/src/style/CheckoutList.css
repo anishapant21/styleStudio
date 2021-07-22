@@ -42,3 +42,25 @@
 .delete-info {
   padding-top: 40px;
 }
+
+@media (max-width: 968px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-info {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .title-info,
+  .icon-plus-minus,
+  .price-info,
+  .remove-item {
+    padding-left: 2rem;
+  }
+}

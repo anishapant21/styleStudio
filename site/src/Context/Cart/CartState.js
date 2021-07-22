@@ -1,7 +1,15 @@
 import { useReducer } from "react";
 import CartContext from "./CartContext";
 import CartReducer from "./CartReducer";
-import { ADD_TO_WISH, ADD_TO_CART, REMOVE_ITEM_WISH } from "../Types";
+import {
+  ADD_TO_WISH,
+  ADD_TO_CART,
+  REMOVE_ITEM_WISH,
+  REMOVE_ITEM_CART,
+  CLEAR_CART,
+  INCREMENT,
+  DECREMENT,
+} from "../Types";
 
 const CartState = ({ children }) => {
   const initialState = {
@@ -23,6 +31,20 @@ const CartState = ({ children }) => {
     dispatch({ type: REMOVE_ITEM_WISH, payload: item });
   };
 
+  const removeItemCart = (item) => {
+    dispatch({ type: REMOVE_ITEM_CART, payload: item });
+  };
+
+  const clearCart = () => {
+    dispatch({ type: CLEAR_CART });
+  };
+  const increment = (title) => {
+    dispatch({ type: INCREMENT, payload: title });
+  };
+  const decrement = (title) => {
+    dispatch({ type: DECREMENT, payload: title });
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -32,6 +54,10 @@ const CartState = ({ children }) => {
         addToCart,
         addToWish,
         removeItemWish,
+        removeItemCart,
+        clearCart,
+        increment,
+        decrement,
       }}
     >
       {children}

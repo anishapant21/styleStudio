@@ -8,13 +8,24 @@ import Item from "./Item";
 import { SimpleGrid, Box } from "@chakra-ui/react";
 import { Scrollbars } from "react-custom-scrollbars-2";
 const Checkout = () => {
-  const { cartItems, addToCart } = useContext(CartContext);
+  const { cartItems, addToCart, removeItemCart, clearCart } =
+    useContext(CartContext);
 
   const renderme = cartItems.map((dat) => {
-    const { id, title, img, price } = dat;
+    console.log("I am here");
+    const { id, title, img, price, quantity } = dat;
     console.log(title);
-    return <CheckoutList key={id} title={title} img={img} price={price} />;
+    return (
+      <CheckoutList
+        key={id}
+        title={title}
+        img={img}
+        price={price}
+        quantity={quantity}
+      />
+    );
   });
+
   let renderCartHere;
   if (cartItems.length != 0) {
     renderCartHere = (
@@ -41,7 +52,18 @@ const Checkout = () => {
           <div style={{ marginLeft: "1100px", marginTop: "20px" }}>
             TOTAL : RS 22000
           </div>
-
+          <button onClick={clearCart}>
+            <Box
+              as="button"
+              borderRadius="md"
+              bg="red"
+              color="white"
+              px={4}
+              h={8}
+            >
+              Clear All
+            </Box>
+          </button>
           <button style={{ marginLeft: "1110px" }}>
             <Box
               as="button"
