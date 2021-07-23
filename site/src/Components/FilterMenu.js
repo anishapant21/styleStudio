@@ -1,10 +1,9 @@
 import React from "react";
 import Item from "./Item";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import "../style/Item.css";
 
 const FilterMenu = ({ items }) => {
-  console.log(items);
   const renderedList = items.map((menuItem) => {
     const { id, title, img, price } = menuItem;
     return <Item key={id} title={title} img={img} price={price} />;

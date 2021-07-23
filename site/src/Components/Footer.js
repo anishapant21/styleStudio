@@ -1,7 +1,5 @@
 import React from "react";
 import "../style/Footer.css";
-import { Box } from "@chakra-ui/react";
-import logo from "../logo.png";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 

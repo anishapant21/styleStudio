@@ -1,20 +1,13 @@
-import React, { useEffect, useState, createContext, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import "../style/ProductDetail.css";
-import CartContext from "../Context/Cart/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-} from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import data from "../Data/data.js";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
-import { FiHeart } from "react-icons/fi";
 import WishButton from "./WishButton";
 import CartButton from "./CartButton";
 
@@ -24,14 +17,12 @@ const ProductDetail = () => {
   const location = useLocation();
   useEffect(() => {
     if (location.state) {
-      console.log(location.state.productName);
       const dataProduct = data.filter(
         (dat) => dat.title === location.state.productName
       );
-      console.log(dataProduct);
       setDataOfProduct(dataProduct);
     }
-  }, []);
+  }, [location.state]);
 
   return (
     <div className="productdetail">
@@ -73,19 +64,28 @@ const ProductDetail = () => {
         <div className="alldetailshere">
           <div className="bigImage">
             <Box className="insidebox">
-              <img src={dataOfProduct[0].img} />
+              <img src={dataOfProduct[0].img} alt={dataOfProduct[0].title} />
             </Box>
           </div>
           <div className="smallImages">
             <SimpleGrid columns={1} spacing={10}>
               <Box>
-                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
+                <img
+                  src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg"
+                  alt={dataOfProduct[0].title}
+                />
               </Box>
               <Box>
-                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
+                <img
+                  src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg"
+                  alt={dataOfProduct[0].title}
+                />
               </Box>
               <Box>
-                <img src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg" />
+                <img
+                  src="/assets/images/malikagupta_sandragowncocktailtroisieme_1.jpg"
+                  alt={dataOfProduct[0].title}
+                />
               </Box>
             </SimpleGrid>
           </div>

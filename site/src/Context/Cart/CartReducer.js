@@ -24,19 +24,16 @@ const CartReducer = (state, action) => {
       };
     }
     case REMOVE_ITEM_WISH: {
-      console.log(action.payload);
       return {
         ...state,
-        wishItems: state.wishItems.filter((item) => item != action.payload),
+        wishItems: state.wishItems.filter((item) => item !== action.payload),
       };
     }
     case REMOVE_ITEM_CART: {
-      console.log(action.payload);
-
       return {
         ...state,
         cartItems: state.cartItems.filter(
-          (item) => item.title != action.payload
+          (item) => item.title !== action.payload
         ),
       };
     }
@@ -73,7 +70,7 @@ const CartReducer = (state, action) => {
           }
           return curElem;
         })
-        .filter((curElem) => curElem.quantity != 0);
+        .filter((curElem) => curElem.quantity !== 0);
 
       return { ...state, cartItems: updatedCart };
     }

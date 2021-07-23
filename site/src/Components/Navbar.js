@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
-import { Container, Flex, Spacer, Box } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/image";
+import { Flex, Spacer, Box } from "@chakra-ui/layout";
 import { IconButton } from "@chakra-ui/react";
 import "../style/Navbar.css";
 import { FaSearch, FaShoppingCart, FaRegHeart } from "react-icons/fa";
-import { FiLogOut } from "react-icons/fi";
 import logo from "../logo.png";
 import { useHistory } from "react-router-dom";
 import CartContext from "../Context/Cart/CartContext";
 
-const Navbar = ({ filterItems, categories }) => {
+const Navbar = () => {
   const { cartItems, wishItems, totalItem } = useContext(CartContext);
   const history = useHistory();
   const clickHome = () => {

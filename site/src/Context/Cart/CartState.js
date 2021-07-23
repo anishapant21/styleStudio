@@ -9,7 +9,6 @@ import {
   CLEAR_CART,
   INCREMENT,
   DECREMENT,
-  GET_TOTAL,
 } from "../Types";
 
 const CartState = ({ children }) => {

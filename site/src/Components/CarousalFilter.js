@@ -10,8 +10,6 @@ const CarousalFilter = () => {
   let feature = "";
   useEffect(() => {
     if (location.state) {
-      console.log(location.state.hotpicks);
-
       if (location.state.hotpicks === "Everything you need") {
         feature = "eyneed";
       } else if (location.state.hotpicks === "Trending Now") {

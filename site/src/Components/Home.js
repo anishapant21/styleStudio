@@ -10,10 +10,8 @@ import Footer from "./Footer";
 const Home = () => {
   const [dataSend, setToDataSend] = useState(data);
 
-  let helpme = [];
   useEffect(() => {
     for (let i = 1; i < 5; i++) {
-      console.log("I am here");
       const newDataSend = data.filter((dat) => dat.feature === "hot");
       setToDataSend(newDataSend);
     }

@@ -1,19 +1,15 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import CartContext from "../Context/Cart/CartContext";
-import data from "../Data/data.js";
 import CheckoutList from "./CheckoutList";
-import Item from "./Item";
 import { SimpleGrid, Box } from "@chakra-ui/react";
 import { Scrollbars } from "react-custom-scrollbars-2";
 const Checkout = () => {
-  const { cartItems, addToCart, removeItemCart, clearCart, totalAmount } =
-    useContext(CartContext);
+  const { cartItems, clearCart, totalAmount } = useContext(CartContext);
 
   const renderme = cartItems.map((dat) => {
     const { id, title, img, price, quantity } = dat;
-    console.log(title);
     return (
       <CheckoutList
         key={id}
@@ -26,7 +22,7 @@ const Checkout = () => {
   });
 
   let renderCartHere;
-  if (cartItems.length != 0) {
+  if (cartItems.length !== 0) {
     renderCartHere = (
       <div style={{ paddingTop: "200px", paddingLeft: "300px" }}>
         <h1>Shopping Cart</h1>

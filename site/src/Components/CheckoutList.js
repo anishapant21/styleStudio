@@ -1,28 +1,17 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import "../style/CheckoutList.css";
-import { FcMinus, FcPlus } from "react-icons/fc";
+import { FcMinus } from "react-icons/fc";
 import { BsPlus } from "react-icons/bs";
 import { RiDeleteBinLine } from "react-icons/ri";
 import CartContext from "../Context/Cart/CartContext";
-import { DECREMENT } from "../Context/Types";
 
 const CheckoutList = ({ id, title, img, price, quantity }) => {
-  const {
-    cartItems,
-    addToCart,
-    removeItemCart,
-    increment,
-    decrement,
-    totalItem,
-  } = useContext(CartContext);
+  const { removeItemCart, increment, decrement } = useContext(CartContext);
   const callDeleteItem = () => {
     removeItemCart(title);
   };
 
-  !!!totalItem != "undefined" ? console.log(totalItem) : console.log("no data");
-
-  console.log(cartItems);
   return (
     <>
       <Box>

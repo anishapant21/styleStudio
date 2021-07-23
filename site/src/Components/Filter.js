@@ -6,15 +6,13 @@ import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 
 const allcategories = ["all", ...new Set(data.map((dat) => dat.category))];
-console.log(allcategories);
 const Filter = () => {
   const [menuItems, setMenuItems] = useState(data);
-  const [categories, setCategories] = useState(allcategories);
+  const categories = allcategories;
 
   const location = useLocation();
   useEffect(() => {
     if (location.state) {
-      console.log(location.state.filterMe);
       const category = location.state.filterMe;
       if (category === "all") {
         setMenuItems(data);
@@ -23,14 +21,14 @@ const Filter = () => {
       const newData = data.filter((dat) => dat.category === category);
       setMenuItems(newData);
     }
-  }, []);
+  }, [location.state]);
 
   return (
     <div
       style={{
-
         background:
-          "linear-gradient(180deg, #F2E6E6 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #F4E7E7 0%, rgba(255, 255, 255, 0) 100%), #DDCDCD" }}
+          "linear-gradient(180deg, #F2E6E6 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #F4E7E7 0%, rgba(255, 255, 255, 0) 100%), #DDCDCD",
+      }}
     >
       <Navbar categories={categories} />
       <span
@@ -55,4 +53,3 @@ const Filter = () => {
 };
 
 export default Filter;
-

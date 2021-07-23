@@ -13,7 +13,6 @@ const WishButton = ({ title }) => {
     const isItemInCart = wishItems.filter(
       (itemInCart) => itemInCart.title === title
     );
-    console.log("am i in cart", isItemInCart);
     const dataProduct = data.filter((dat) => dat.title === title);
     if (isItemInCart.length === 1) {
       removeItemWish(dataProduct[0]);
@@ -25,11 +24,10 @@ const WishButton = ({ title }) => {
 
   useEffect(() => {
     const countMeIn = wishItems.filter((it) => it.title === title);
-    console.log(countMeIn);
     if (countMeIn.length === 1) {
       setHeartClick(true);
     }
-  });
+  }, [wishItems, title]);
 
   if (heartClick === false) {
     renderHeart = "heartisempty";

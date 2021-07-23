@@ -1,8 +1,7 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import "../style/Item.css";
 import { useHistory } from "react-router-dom";
-import { FiHeart } from "react-icons/fi";
 import CartContext from "../Context/Cart/CartContext";
 import data from "../Data/data.js";
 import WishButton from "./WishButton";
@@ -10,43 +9,17 @@ import WishButton from "./WishButton";
 export const UserContext = createContext();
 
 const Item = ({ img, title, price, id }) => {
-  const { cartItems, removeItemWish, addToWish, wishItems, addToCart } =
-    useContext(CartContext);
+  const { cartItems, addToCart } = useContext(CartContext);
 
-  const [heartClick, setHeartClick] = useState(false);
   const [cartButton, setCartButton] = useState("Add to Cart");
   const rupee = `RS ${price}`;
   const history = useHistory();
   const clickDetail = (e) => {
-    console.log("i am baby e", e);
     history.push({
       pathname: "/productdetail",
       state: { productName: e },
     });
   };
-
-  // const callToMakeYourHeart = () => {
-  //   setHeartClick(!heartClick);
-  //   const isItemInCart = wishItems.filter(
-  //     (itemInCart) => itemInCart.title === title
-  //   );
-  //   console.log("am i in cart", isItemInCart);
-  //   const dataProduct = data.filter((dat) => dat.title === title);
-  //   if (isItemInCart.length === 1) {
-  //     removeItemWish(dataProduct[0]);
-  //   } else {
-  //     addToWish(dataProduct[0]);
-  //   }
-  // };
-  // let renderHeart;
-
-  // useEffect(() => {
-  //   const countMeIn = wishItems.filter((it) => it.title === title);
-  //   console.log(countMeIn);
-  //   if (countMeIn.length === 1) {
-  //     setHeartClick(true);
-  //   }
-  // }, []);
 
   const callAddToCart = (title) => {
     setCartButton("Added");
@@ -61,19 +34,13 @@ const Item = ({ img, title, price, id }) => {
     if (countMeInCart.length === 1) {
       setCartButton("Added");
     }
-  });
-
-  // if (heartClick === false) {
-  //   renderHeart = "heartisempty";
-  // } else {
-  //   renderHeart = "heartisfull";
-  // }
+  }, [cartItems, title]);
 
   return (
     <>
       <Box className="boxme">
         <div className="card">
-          <img className="imagemeHere" src={img} />
+          <img className="imagemeHere" src={img} alt={title} />
           <div className="info">
             <button
               onClick={() => {
@@ -99,7 +66,7 @@ const Item = ({ img, title, price, id }) => {
             <div className="name">{title}</div>
           </div>
           <div>
-            <WishButton title={title} />
+            <WishButton key={id} title={title} />
           </div>
         </div>
       </Box>
@@ -108,10 +75,3 @@ const Item = ({ img, title, price, id }) => {
 };
 
 export default Item;
-
-{
-  /* <FiHeart
-onClick={() => callToMakeYourHeart(title)}
-className={renderHeart}
-/> */
-}
