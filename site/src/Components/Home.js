@@ -14,12 +14,7 @@ const Home = () => {
   useEffect(() => {
     for (let i = 1; i < 5; i++) {
       console.log("I am here");
-      const newDataSend = data.filter(
-        (dat) =>
-          dat.category === "pant" ||
-          dat.category === "shoes" ||
-          dat.category === "access"
-      );
+      const newDataSend = data.filter((dat) => dat.feature === "hot");
       setToDataSend(newDataSend);
     }
   }, []);

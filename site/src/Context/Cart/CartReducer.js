@@ -6,6 +6,7 @@ import {
   CLEAR_CART,
   INCREMENT,
   DECREMENT,
+  GET_TOTAL,
 } from "../Types";
 
 const CartReducer = (state, action) => {
@@ -75,6 +76,23 @@ const CartReducer = (state, action) => {
         .filter((curElem) => curElem.quantity != 0);
 
       return { ...state, cartItems: updatedCart };
+    }
+
+    case GET_TOTAL: {
+      let { totalItem, totalAmount } = state.cartItems.reduce(
+        (accum, curVal) => {
+          let { price, quantity } = curVal;
+          let updatedTotalAmount = price * quantity;
+          accum.totalAmount += updatedTotalAmount;
+          accum.totalItem += quantity;
+          return accum;
+        },
+        {
+          totalItem: 0,
+          totalAmount: 0,
+        }
+      );
+      return { ...state, totalItem, totalAmount };
     }
 
     default:

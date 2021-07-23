@@ -5,3 +5,4 @@ export const REMOVE_ITEM_CART = "REMOVE_ITEM_CART";
 export const CLEAR_CART = "CLEAR_CART";
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
+export const GET_TOTAL = "GET_TOTAL";

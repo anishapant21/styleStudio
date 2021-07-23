@@ -99,15 +99,41 @@ const ProductDetail = () => {
                 <AiFillStar size={20} />
                 <AiOutlineStar size={20} />
               </div>
-              <div className="writeprice">RS {dataOfProduct[0].price}</div>
+              <div style={{ display: "flex" }} className="priceHere">
+                <div className="writeprice">RS {dataOfProduct[0].price}</div>
+                <div className="writepricenew">
+                  RS {(80 / 100) * dataOfProduct[0].price}
+                </div>
+              </div>
+
               <div className="desc">
                 Let's groove tonight. This dress features a V neckline, relaxed,
                 midi silhouette, button down closure, split at front, racerback,
                 and wave print throughout. Team with your favourite dancing
                 shoes.
-                <p className="writextra"> Shell: 100% rayon </p>{" "}
-                <p>Lining: 100% polyester</p>
-                <p style={{ paddingTop: "20px" }}>Size: M, L, XL</p>
+                <p
+                  style={{
+                    fontFamily: "fantasy",
+                    fontSize: "20px",
+                    color: "gray",
+                  }}
+                  className="writextra"
+                >
+                  {" "}
+                  Shell: 100% rayon{" "}
+                </p>{" "}
+                <p
+                  style={{
+                    fontFamily: "fantasy",
+                    fontSize: "20px",
+                    color: "gray",
+                  }}
+                >
+                  Lining: 100% polyester
+                </p>
+                <p style={{ paddingTop: "20px", fontWeight: "bold" }}>
+                  Size: M, L, XL
+                </p>
               </div>
               <div style={{ paddingTop: "30px", display: "flex" }}>
                 <div>

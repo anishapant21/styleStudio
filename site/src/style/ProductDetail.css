@@ -46,6 +46,7 @@
 .stars {
   display: flex;
   padding-top: 50px;
+  color: rosybrown;
 }
 
 .starts-fill {
@@ -95,7 +96,15 @@
 
 .writeprice {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 20px;
+  text-decoration: line-through;
+  text-decoration-color: saddlebrown;
+  padding-right: 20px;
+}
+
+.writepricenew {
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 .desc .p {

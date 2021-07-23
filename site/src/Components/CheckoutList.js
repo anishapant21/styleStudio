@@ -8,11 +8,21 @@ import CartContext from "../Context/Cart/CartContext";
 import { DECREMENT } from "../Context/Types";
 
 const CheckoutList = ({ id, title, img, price, quantity }) => {
-  const { cartItems, addToCart, removeItemCart, increment, decrement } =
-    useContext(CartContext);
+  const {
+    cartItems,
+    addToCart,
+    removeItemCart,
+    increment,
+    decrement,
+    totalItem,
+  } = useContext(CartContext);
   const callDeleteItem = () => {
     removeItemCart(title);
   };
+
+  !!!totalItem != "undefined" ? console.log(totalItem) : console.log("no data");
+
+  console.log(cartItems);
   return (
     <>
       <Box>

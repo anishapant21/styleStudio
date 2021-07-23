@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 import WishList from "./WishList";
 import Checkout from "./Checkout";
+import CarousalFilter from "./CarousalFilter";
 
 const App = () => {
   return (
@@ -27,6 +28,12 @@ const App = () => {
         <Route path="/wishlist">
           <ChakraProvider>
             <WishList />
+          </ChakraProvider>
+        </Route>
+
+        <Route path="/hotpicks">
+          <ChakraProvider>
+            <CarousalFilter />
           </ChakraProvider>
         </Route>
 

@@ -5,8 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Box, { requiredChakraThemeKeys } from "@chakra-ui/react";
+import Item from "./Item";
+import data from "../Data/data.js";
+import FilterMenu from "./FilterMenu";
+import { useHistory } from "react-router-dom";
 
 const Carousel = () => {
+  const history = useHistory();
   var settings = {
     dots: false,
     infinite: true,
@@ -38,6 +43,33 @@ const Carousel = () => {
         "https://ae01.alicdn.com/kf/HTB1eCFiadzvK1RkSnfoq6zMwVXaq/New-1lot-18pcs-Cute-Ribbon-Bowknot-Flower-Hairpins-Hair-Barrettes-Children-Hair-Accessories-Baby-Girls-Headwear.jpg",
     },
   ];
+  let renderAgainHere;
+  let newDataSEndCar;
+
+  const callCarList = (d) => {
+    history.push({
+      pathname: "/hotpicks",
+      state: { hotpicks: d },
+    });
+    // if (title === "Everything you need") {
+    //   console.log("I am every");
+    //   newDataSEndCar = data.filter((dat) => dat.feature === "eyneed");
+    //   //renderAgainHere = <FilterMenu items={newDataSEndCar} />;
+    //   return <FilterMenu items={newDataSEndCar} />;
+    // } else if (title === "Trending Now") {
+    //   newDataSEndCar = data.filter((dat) => dat.feature === "trending");
+    //   //renderAgainHere = <FilterMenu items={newDataSEndCar} />;
+    //   return <FilterMenu items={newDataSEndCar} />;
+    // } else if (title === "Feel the vibe") {
+    //   newDataSEndCar = data.filter((dat) => dat.feature === "vibe");
+    //   //renderAgainHere = <FilterMenu items={newDataSEndCar} />;
+    //   return <FilterMenu items={newDataSEndCar} />;
+    // } else {
+    //   newDataSEndCar = data.filter((dat) => dat.feature === "myfp");
+    //   //renderAgainHere = <FilterMenu items={newDataSEndCar} />;
+    //   return <FilterMenu items={newDataSEndCar} />;
+    // }
+  };
 
   return (
     <div
@@ -62,6 +94,7 @@ const Carousel = () => {
                   backgroundSize: "80ch 70ch",
                   boxShadow: "4px 15px 4px rgba(0, 0, 0, 0.25)",
                 }}
+                onClick={() => callCarList(list.title)}
               >
                 <img
                   style={{ paddingTop: "10px", minHeight: "650px" }}

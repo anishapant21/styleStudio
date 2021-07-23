@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import CartContext from "../Context/Cart/CartContext";
 
 const Navbar = ({ filterItems, categories }) => {
-  const { cartItems, wishItems } = useContext(CartContext);
+  const { cartItems, wishItems, totalItem } = useContext(CartContext);
   const history = useHistory();
   const clickHome = () => {
     history.push({
@@ -60,10 +60,12 @@ const Navbar = ({ filterItems, categories }) => {
           <div className="item" onClick={() => clickFilter("access")}>
             Accessories
           </div>
-          <div className="item" onClick={() => clickFilter("all")}>
+          <div className="item" onClick={() => clickFilter("bags")}>
             Bags
           </div>
-          <div className="item">New</div>
+          <div className="item" onClick={() => clickFilter("dress")}>
+            Dress
+          </div>
           <div className="item">Sale</div>
         </div>
       </Box>
@@ -82,7 +84,7 @@ const Navbar = ({ filterItems, categories }) => {
       <Box>
         {cartItems.length > 0 && (
           <div className="itemCountCart">
-            <span>{cartItems.length}</span>
+            <span>{totalItem}</span>
           </div>
         )}
       </Box>

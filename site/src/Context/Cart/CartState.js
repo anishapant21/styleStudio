@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import CartContext from "./CartContext";
 import CartReducer from "./CartReducer";
 import {
@@ -9,12 +9,15 @@ import {
   CLEAR_CART,
   INCREMENT,
   DECREMENT,
+  GET_TOTAL,
 } from "../Types";
 
 const CartState = ({ children }) => {
   const initialState = {
     cartItems: [],
     wishItems: [],
+    totalItem: 0,
+    totalAmount: 0,
   };
 
   const [state, dispatch] = useReducer(CartReducer, initialState);
@@ -45,9 +48,16 @@ const CartState = ({ children }) => {
     dispatch({ type: DECREMENT, payload: title });
   };
 
+  useEffect(() => {
+    dispatch({
+      type: "GET_TOTAL",
+    });
+  }, [state.cartItems]);
+
   return (
     <CartContext.Provider
       value={{
+        ...state,
         showCart: state.showCart,
         cartItems: state.cartItems,
         wishItems: state.wishItems,

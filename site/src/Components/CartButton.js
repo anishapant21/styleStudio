@@ -19,7 +19,7 @@ const CartButton = ({ title }) => {
   let renderHeart;
 
   useEffect(() => {
-    const countMeIn = cartItems.filter((it) => it === title);
+    const countMeIn = cartItems.filter((it) => it.title === title);
     console.log(countMeIn);
     if (countMeIn.length === 1) {
       setCartClick("ADDED TO CART");
