@@ -62,9 +62,8 @@ const Carousel = () => {
       <Slider {...settings}>
         {listMe.map(function (list) {
           return (
-            <React.Fragment>
+            <React.Fragment key={list.id}>
               <div
-                key={list.id}
                 style={{
                   width: "650px",
                   height: "708px",

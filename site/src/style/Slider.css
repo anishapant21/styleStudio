@@ -1,13 +1,129 @@
-.slider{
+.slider {
+  position: absolute;
+  width: 1605px;
+  height: 690px;
+  left: 160px;
+  top: 250px;
+
+  background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg);
+  background-size: cover;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 83px;
+}
+
+.discountInfo {
+  position: absolute;
+  width: 440px;
+  height: 184px;
+  left: 100px;
+  top: 90px;
+
+  font-family: Rosario;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 87px;
+
+  color: #411e1e;
+}
+
+.quote {
+  position: absolute;
+  width: 457px;
+  height: 434px;
+  left: 1200px;
+  top: 100px;
+
+  font-family: Sacramento;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 105px;
+
+  color: #000000;
+}
+
+.shopButton {
+  position: absolute;
+  width: 208px;
+  height: 80px;
+  left: 100px;
+  top: 270px;
+
+  background: #f2c1c1;
+  border: 1px solid #0e1a8d;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  font-size: 30px;
+  font-family: fantasy;
+  padding: 15px 38px;
+  cursor: pointer;
+
+  border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    position: relative;
+    width: 350px;
+    height: 150px;
+    left: 15px;
+    top: 200px;
+
+    background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg);
+    background-size: cover;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 52px;
+  }
+
+  .discountInfo {
     position: absolute;
-width: 1605px;
-height: 690px;
-left: 160px;
-top: 250px;
+    width: 100px;
+    height: 20px;
+    left: 10px;
+    top: 20px;
 
-background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg) ;
-background-size: cover;
+    font-family: Rosario;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 15px;
 
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-radius: 83px;
+    color: #411e1e;
+  }
+  .quote {
+    position: absolute;
+    width: 90px;
+    height: 34px;
+    left: 258px;
+    top: 22px;
+
+    font-family: Sacramento;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+  }
+  .shopButton {
+    position: absolute;
+    width: 65px;
+    height: 20px;
+    left: 2px;
+    top: 68px;
+
+    background: #f2c1c1;
+    border: 1px solid #0e1a8d;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    font-size: 8px;
+    font-family: fantasy;
+    padding: 10px 25px;
+    cursor: pointer;
+
+    border-radius: 10px;
+  }
 }

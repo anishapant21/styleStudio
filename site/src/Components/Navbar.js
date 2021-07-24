@@ -69,7 +69,8 @@ const Navbar = () => {
       </Box>
       <Box>
         <div className="search">
-          <FaSearch />
+          <FaSearch className="searchlogo" />
+          <span className="searchname">Search</span>
         </div>
       </Box>
       <Box>

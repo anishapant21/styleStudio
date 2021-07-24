@@ -55,8 +55,19 @@
 
   background: #fef6f6;
   border-radius: 10px;
+  display: flex;
 }
 
+.searchname {
+  margin-top: 15px;
+  margin-left: 20px;
+  color: gray;
+  font-size: 18px;
+}
+.searchlogo {
+  margin-top: 15px;
+  margin-left: 10px;
+}
 .cart {
   position: absolute;
 

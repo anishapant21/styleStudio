@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import data from "../Data/data.js";
 import FilterMenu from "./FilterMenu.js";
@@ -7,23 +7,26 @@ import Footer from "./Footer.js";
 const CarousalFilter = () => {
   const location = useLocation();
   const [menuCar, setMenuCar] = useState(data);
-  let feature = "";
+  let feature = useRef();
+
   useEffect(() => {
     if (location.state) {
       if (location.state.hotpicks === "Everything you need") {
-        feature = "eyneed";
+        feature.current = "eyneed";
       } else if (location.state.hotpicks === "Trending Now") {
-        feature = "trending";
+        feature.current = "trending";
       } else if (location.state.hotpicks === "Feel the vibe") {
-        feature = "vibe";
+        feature.current = "vibe";
       } else {
-        feature = "myfp";
+        feature.current = "myfp";
       }
     }
 
-    const newDataCarousal = data.filter((dat) => dat.feature === feature);
+    const newDataCarousal = data.filter(
+      (dat) => dat.feature === feature.current
+    );
     setMenuCar(newDataCarousal);
-  }, []);
+  }, [location.state]);
 
   return (
     <div
