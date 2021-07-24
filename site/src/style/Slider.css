@@ -66,10 +66,10 @@
 @media (max-width: 768px) {
   .slider {
     position: relative;
-    width: 350px;
-    height: 150px;
-    left: 15px;
-    top: 200px;
+    width: 700px;
+    height: 300px;
+    left: 40px;
+    top: 250px;
 
     background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg);
     background-size: cover;
@@ -80,48 +80,47 @@
 
   .discountInfo {
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: 20px;
-    left: 10px;
-    top: 20px;
+    left: 20px;
+    top: 30px;
 
     font-family: Rosario;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 15px;
+    font-size: 32px;
+    line-height: 28px;
 
     color: #411e1e;
   }
   .quote {
     position: absolute;
-    width: 90px;
+    width: 180px;
     height: 34px;
-    left: 258px;
-    top: 22px;
+    left: 520px;
+    top: 60px;
 
     font-family: Sacramento;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 32px;
+    line-height: 24px;
 
     color: #000000;
   }
   .shopButton {
-    position: absolute;
-    width: 65px;
-    height: 20px;
-    left: 2px;
-    top: 68px;
+    width: 90px;
+    height: 30px;
+    left: 15px;
+    top: 125px;
 
     background: #f2c1c1;
     border: 1px solid #0e1a8d;
     box-sizing: border-box;
     backdrop-filter: blur(2px);
-    font-size: 8px;
+    font-size: 18px;
     font-family: fantasy;
-    padding: 10px 25px;
+    padding: 3px 5px;
     cursor: pointer;
 
     border-radius: 10px;

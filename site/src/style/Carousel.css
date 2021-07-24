@@ -1,24 +1,65 @@
-.heading{
+.heading {
+  position: absolute;
+  width: 462px;
+  height: 82px;
+  left: 807px;
+  top: 1020px;
+
+  font-family: Noto Serif SC;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 92px;
+
+  color: #000000;
+}
+
+.slick-arrow {
+  background-color: bisque;
+}
+
+.car {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 1200px;
+}
+
+.cartList {
+  width: 650px;
+  height: 708px;
+  left: 281px;
+  top: 1183px;
+  padding-left: 100px;
+  background-size: 80ch 70ch;
+  box-shadow: 4px 15px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image-here {
+  padding-top: 10px;
+  min-height: 650px;
+}
+
+@media (max-width: 768px) {
+  .heading {
     position: absolute;
-width: 462px;
-height: 82px;
-left: 807px;
-top: 1020px;
+    width: 220px;
+    height: 42px;
+    left: 250px;
+    top: 600px;
+    font-size: 40px;
+  }
 
-font-family: Noto Serif SC;
-font-style: normal;
-font-weight: 200;
-font-size: 60px;
-line-height: 92px;
+  .cartList {
+    width: 350px;
+    height: 400px;
+    left: 20px;
+    padding-left: 10px;
+    background-size: 40ch 30ch;
+    box-shadow: 4px 15px 4px rgba(0, 0, 0, 0.25);
+  }
 
-color: #000000;
-
+  .image-here {
+    padding-top: 20px;
+    min-height: 220px;
+  }
 }
-
-.slick-arrow{
-    background-color: bisque;
-    
-    
-    
-}
-

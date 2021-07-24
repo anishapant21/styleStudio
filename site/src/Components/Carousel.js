@@ -51,32 +51,15 @@ const Carousel = () => {
   };
 
   return (
-    <div
-      style={{
-        paddingLeft: "100px",
-        paddingRight: "100px",
-        paddingTop: "1200px",
-      }}
-    >
+    <div className="car">
       <div className="heading">Lets Explore</div>
       <Slider {...settings}>
         {listMe.map(function (list) {
           return (
             <React.Fragment key={list.id}>
-              <div
-                style={{
-                  width: "650px",
-                  height: "708px",
-                  left: "281px",
-                  top: "1183px",
-                  paddingLeft: "100px",
-                  backgroundSize: "80ch 70ch",
-                  boxShadow: "4px 15px 4px rgba(0, 0, 0, 0.25)",
-                }}
-                onClick={() => callCarList(list.title)}
-              >
+              <div className="cartList" onClick={() => callCarList(list.title)}>
                 <img
-                  style={{ paddingTop: "10px", minHeight: "650px" }}
+                  className="image-here"
                   src={list.picture}
                   alt={list.title}
                 />

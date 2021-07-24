@@ -14,7 +14,7 @@ const Slider = () => {
         <div className="shopButton">Shop Now</div>
         <div className="quote">
           Feel the summer <b />
-          with <t></t>
+          with
           <b />
           some colors
         </div>
