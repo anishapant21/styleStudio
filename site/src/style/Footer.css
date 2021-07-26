@@ -1,97 +1,97 @@
-.footer{
-    
-width: 1905px;
-height: 600px;
-margin-top: 350px;
+.footer {
+  width: 1905px;
+  height: 600px;
+  margin-top: 350px;
 
-background: linear-gradient(180deg, #7A6565 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #847A7A 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
-display: flex;
+  background: linear-gradient(180deg, #7a6565 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, #847a7a 0%, rgba(255, 255, 255, 0) 100%), #c4c4c4;
+  display: flex;
 }
 
-
-
-
-
-
-.logomeFooter{
-    position: relative;
-    width: 313.76px;
-    height: 70px;
-    left: 150px;
-    top:50px;
-    
-
+.logomeFooter {
+  position: relative;
+  width: 313.76px;
+  height: 70px;
+  left: 150px;
+  top: 50px;
 }
-.footerDetails{
-    margin-top:150px;
-    margin-left:150px ;
-    font-size: 32px;
-    display: flex;
-    
+.footerDetails {
+  margin-top: 150px;
+  margin-left: 150px;
+  font-size: 32px;
+  display: flex;
 }
 
-ol{
-    margin-top:20px;
+ol {
+  margin-top: 20px;
 }
 
-li{
-    list-style-type: none;
-    
+li {
+  list-style-type: none;
 }
 
-.headingFooter{
-    margin-bottom:  40px;
-    font-size: 40px;
-    margin-right:100px ;
+li:hover {
+  color: white;
+  cursor: pointer;
 }
 
-.contactLogo{
-    font-size: 50px;
-    margin-top: 50px;
-    margin-left:150px ;
-    display: flex;
+.headingFooter {
+  margin-bottom: 40px;
+  font-size: 40px;
+  margin-right: 100px;
 }
 
-.logoeach{
-    margin-right:30px ;
+.contactLogo {
+  font-size: 50px;
+  margin-top: 50px;
+  margin-left: 150px;
+  display: flex;
 }
 
-.boxMe{
-margin-top: 100px;
-margin-left: 180px;
+.logoeach {
+  margin-right: 30px;
 }
 
-.labelMe{
-    margin-bottom: 20px;
-
-font-family: Roboto;
-font-style: italic;
-font-weight: 300;
-font-size: 30px;
-line-height: 42px;
+.logoeach:hover {
+  color: whitesmoke;
+  cursor: pointer;
 }
 
-.typeMe{
-    width: 374px;
-height: 273px;
-
-
-background: #F5DFDF;
-border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 13px;
+.boxMe {
+  margin-top: 100px;
+  margin-left: 180px;
 }
 
-.subButton{
-    position: absolute;
-width: 104px;
-height: 48px;
-margin-left: -110px;
-margin-top: 300px ;
+.labelMe {
+  margin-bottom: 20px;
 
-background: #FFF9F9;
-border: 1px solid #141414;
-box-sizing: border-box;
-border-radius: 10px;
-cursor: pointer;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.typeMe {
+  width: 374px;
+  height: 273px;
+
+  background: #f5dfdf;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 13px;
+}
+
+.subButton {
+  position: absolute;
+  width: 104px;
+  height: 48px;
+  margin-left: -110px;
+  margin-top: 300px;
+
+  background: #fff9f9;
+  border: 1px solid #141414;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
 }
