@@ -47,30 +47,34 @@ const Checkout = () => {
           <div style={{ marginLeft: "1100px", marginTop: "20px" }}>
             TOTAL : RS {totalAmount}
           </div>
-          <button onClick={clearCart}>
-            <Box
+          <div onClick={clearCart}>
+            
+          <Box
               as="button"
               borderRadius="md"
               bg="red"
               color="white"
               px={4}
-              h={8}
+              
             >
               Clear All
             </Box>
-          </button>
-          <button style={{ marginLeft: "1110px" }}>
-            <Box
+            
+          </div>
+          <div style={{ marginLeft: "1110px" }}>
+            
+          <Box
               as="button"
               borderRadius="md"
               bg="tomato"
               color="white"
               px={4}
-              h={8}
+              
             >
               Checkout
             </Box>
-          </button>
+            
+          </div>
         </div>
       </div>
     );

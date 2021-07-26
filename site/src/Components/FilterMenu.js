@@ -11,7 +11,7 @@ const FilterMenu = ({ items }) => {
 
   return (
     <div style={{ marginTop: "150px" }}>
-      <SimpleGrid columns={4} rowGap={20}>
+      <SimpleGrid columns={4} rowGap={200}>
         {renderedList}
       </SimpleGrid>
     </div>

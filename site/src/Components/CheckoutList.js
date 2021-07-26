@@ -20,9 +20,9 @@ const CheckoutList = ({ id, title, img, price, quantity }) => {
             <Image
               className="iamge-image"
               borderRadius="full"
-              boxSize="100px"
+              boxSize="150px"
               src={img}
-              alt="Segun Adebayo"
+              alt={title}
             />
           </div>
           <div className="title-info">{title}</div>
