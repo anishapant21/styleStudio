@@ -39,7 +39,7 @@
   min-height: 650px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .heading {
     position: absolute;
     width: 220px;
@@ -62,4 +62,4 @@
     padding-top: 20px;
     min-height: 220px;
   }
-}
+} */

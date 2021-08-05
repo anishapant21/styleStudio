@@ -8,11 +8,22 @@ import ProductDetail from "./ProductDetail";
 import WishList from "./WishList";
 import Checkout from "./Checkout";
 import CarousalFilter from "./CarousalFilter";
+import SummerSale from "./SummerSale";
 
 const App = () => {
   return (
     <Router>
       <Switch>
+      <Route path="/summersale">
+          <ChakraProvider>
+            <SummerSale />
+          </ChakraProvider>
+        </Route>
+      <Route path="/filter/pant">
+          <ChakraProvider>
+            <Filter />
+          </ChakraProvider>
+        </Route>
         <Route path="/filter">
           <ChakraProvider>
             <Filter />

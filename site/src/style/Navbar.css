@@ -23,33 +23,42 @@
 }
 
 .menu-items {
-  display: inline-flex;
-}
-
-.item {
-  text-align: center;
-  padding: 15px 0;
-  cursor: pointer;
-  width: 120px;
-  height: 65px;
-  font-size: 20px;
-}
-.item-active {
-  text-align: center;
-  padding: 15px 0;
-  cursor: pointer;
-  width: 120px;
-  height: 65px;
+  display: flex;
   position: absolute;
+}
+
+/* .item {
+  position: absolute;
+  text-align: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  width: 120px;
+  height: 65px;
   font-size: 20px;
+} */
+.item-active {
+  position: absolute;
+  text-align: center;
 
-  background: #a58484;
+  cursor: pointer;
+  width: 120px;
+  height: 65px;
+  font-size: 22px;
+  background-color: #a58484;
   color: white;
+  background-size: 100% 100%;
 }
 
-.item:active {
-  background-color: yellow;
+.notactive {
+  position: relative;
+  font-size: 22px;
+  padding: 15px 0;
+  width: 120px;
+  height: 65px;
+  text-align: center;
+  background-size: 100% 100%;
 }
+
 .search {
   position: absolute;
   width: 200px;

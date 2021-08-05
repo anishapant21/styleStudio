@@ -40,7 +40,7 @@ const ProductDetail = () => {
           paddingTop: "5px",
         }}
       >
-        Get 20% discount on all the products
+        !!! Get amazing discount on all the products !!!
       </span>
 
       <div className="detail">

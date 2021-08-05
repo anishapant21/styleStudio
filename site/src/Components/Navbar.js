@@ -6,6 +6,7 @@ import { FaSearch, FaShoppingCart, FaRegHeart } from "react-icons/fa";
 import logo from "../logo.png";
 import { useHistory } from "react-router-dom";
 import CartContext from "../Context/Cart/CartContext";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { cartItems, wishItems, totalItem } = useContext(CartContext);
@@ -18,7 +19,7 @@ const Navbar = () => {
 
   const clickFilter = (d) => {
     history.push({
-      pathname: "/filter",
+      pathname: `/filter/${d}`,
       state: { filterMe: d },
     });
   };
@@ -43,28 +44,78 @@ const Navbar = () => {
       <Spacer />
       <Box className="menu">
         <div className="menu-items">
-          <div className="item-active" onClick={() => clickHome()}>
-            Home
+          <div className="notactive" onClick={() => clickHome()}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/"
+            >
+              Home
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("all")}>
-            Dress
+          <div className="notactive" onClick={() => clickFilter("pant")}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/filter/pant"
+            >
+              Pant
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("pant")}>
-            Pants
+
+          <div className="notactive" onClick={() => clickFilter("dress")}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/filter/dress"
+            >
+              Dress
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("shoes")}>
-            Shoes
+
+          <div className="notactive" onClick={() => clickFilter("shoes")}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/filter/shoes"
+            >
+              Shoes
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("access")}>
-            Accessories
+          <div className="notactive" onClick={() => clickFilter("bags")}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/filter/bags"
+            >
+              Bags
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("bags")}>
-            Bags
+          <div className="notactive" onClick={() => clickFilter("access")}>
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/filter/access"
+            >
+              Accessories
+            </NavLink>
           </div>
-          <div className="item" onClick={() => clickFilter("dress")}>
-            Dress
+          <div className="notactive">
+            <NavLink
+              exact
+              activeClassName="item-active"
+              className="notactive"
+              to="/summersale"
+            >
+              Sale
+            </NavLink>
           </div>
-          <div className="item">Sale</div>
         </div>
       </Box>
       <Box>

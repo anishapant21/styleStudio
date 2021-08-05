@@ -63,7 +63,7 @@
   border-radius: 32px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .slider {
     position: relative;
     width: 700px;
@@ -125,4 +125,4 @@
 
     border-radius: 10px;
   }
-}
+} */

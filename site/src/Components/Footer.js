@@ -9,7 +9,7 @@ const Footer = () => {
       <div>
         <img
           className="logomeFooter"
-          src="./assets/icons/logo.png"
+          src="../assets/icons/logo.png"
           alt="logo"
         />
         <div className="footerDetails">

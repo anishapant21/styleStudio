@@ -6,6 +6,7 @@ const data = [
     category: "pant",
     img: "../assets/images/leather-clutch-bag-for-women-clutches-leather-bag-girls-ladies-clutch-purse-leather-crocodile-pattern-croc-bag-italian-leather-purse-black.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "eyneed",
   },
   {
@@ -15,6 +16,7 @@ const data = [
     category: "dress",
     img: "../assets/images/25f5b6a7-ce25-4e66-8a61-3aa2037b6c741600207614629-1.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "myfp",
   },
   {
@@ -24,6 +26,7 @@ const data = [
     category: "shoes",
     img: "../assets/images/0dc73ba43ecaa92a2823188ca04793fc.jpeg",
     quantity: 1,
+    weather:"winter",
     feature: "hot",
   },
   {
@@ -33,6 +36,7 @@ const data = [
     price: 1200,
     img: "../assets/images/50241523fg_13_n_f.jpg",
     quantity: 1,
+    weather:"none",
     feature: "myfp",
   },
   {
@@ -42,6 +46,7 @@ const data = [
     price: 12000,
     img: "../assets/images/Lehenga-Designs-The-Crimson-Bride-1-768x945.jpg",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -51,6 +56,7 @@ const data = [
     category: "dress",
     img: "../assets/images/07-10-20TORANI33955_600x.jpg",
     quantity: 1,
+    weather:"none",
     feature: "myfp",
   },
   {
@@ -60,6 +66,7 @@ const data = [
     category: "dress",
     img: "../assets/images/35YP97-600x800.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "trending",
   },
   {
@@ -69,6 +76,7 @@ const data = [
     category: "dress",
     img: "../assets/images/2395sr18-sw-518.jpg",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -78,6 +86,7 @@ const data = [
     category: "dress",
     img: "../assets/images/05002-0392_1_750x.jpg",
     quantity: 1,
+    weather:"none",
     feature: "trending",
   },
   {
@@ -87,6 +96,7 @@ const data = [
     category: "pant",
     img: "../assets/images/00390133-04.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "vibe",
   },
   {
@@ -96,6 +106,7 @@ const data = [
     category: "dress",
     img: "../assets/images/00434231-01.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "myfp",
   },
   {
@@ -105,6 +116,7 @@ const data = [
     category: "dress",
     img: "../assets/images/157052696872633f9c489d7023a8acb11be2ac3d12.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "hot",
   },
   {
@@ -114,6 +126,7 @@ const data = [
     category: "dress",
     img: "../assets/images/bmg19064l_black_hickory_ombre_front.jpg",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -123,6 +136,7 @@ const data = [
     category: "bags",
     img: "../assets/images/Cross bag.jpg",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -132,6 +146,7 @@ const data = [
     category: "bags",
     img: "../assets/images/Fendi Blue Bag.jpg",
     quantity: 1,
+    weather:"none",
     feature: "trending",
   },
   {
@@ -141,6 +156,7 @@ const data = [
     category: "bags",
     img: "../assets/images/High Spirited Bags.jpg",
     quantity: 1,
+    weather:"none",
     feature: "trending",
   },
   {
@@ -150,6 +166,7 @@ const data = [
     category: "bags",
     img: "../assets/images/Forever young wallet.jpeg",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -159,6 +176,7 @@ const data = [
     category: "bags",
     img: "../assets/images/Forever Sunny Pink.jpeg",
     quantity: 1,
+    weather:"none",
     feature: "myfp",
   },
   {
@@ -168,6 +186,7 @@ const data = [
     category: "access",
     img: "../assets/images/americandiamond.jpg",
     quantity: 1,
+    weather:"none",
     feature: "myfp",
   },
   {
@@ -177,6 +196,7 @@ const data = [
     category: "access",
     img: "../assets/images/moonstone.jpg",
     quantity: 1,
+    weather:"none",
     feature: "hot",
   },
   {
@@ -186,6 +206,7 @@ const data = [
     category: "access",
     img: "../assets/images/pinkknot.jpg",
     quantity: 1,
+    weather:"none",
     feature: "myfp",
   },
   {
@@ -195,6 +216,7 @@ const data = [
     category: "access",
     img: "../assets/images/Shiny diamond set.png",
     quantity: 1,
+    weather:"none",
     feature: "eyneed",
   },
   {
@@ -204,6 +226,7 @@ const data = [
     category: "bags",
     img: "../assets/images/Cute tote bag.jpg",
     quantity: 1,
+    weather:"none",
     feature: "hot",
   },
   {
@@ -213,6 +236,7 @@ const data = [
     category: "pant",
     img: "../assets/images/Denim shorts.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "vibe",
   },
   {
@@ -222,6 +246,7 @@ const data = [
     category: "pant",
     img: "../assets/images/Grey Joggers.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "vibe",
   },
   {
@@ -231,6 +256,7 @@ const data = [
     category: "pant",
     img: "../assets/images/High rise black pant.jpg",
     quantity: 1,
+    weather:"summer",
     feature: "eyneed",
   },
   {
@@ -240,6 +266,7 @@ const data = [
     category: "pant",
     img: "../assets/images/Waist Cargo.jpeg",
     quantity: 1,
+    weather:"summer",
     feature: "eyneed",
   },
   {
