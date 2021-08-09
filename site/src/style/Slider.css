@@ -1,63 +1,65 @@
 .slider {
   position: absolute;
-  width: 1605px;
-  height: 690px;
-  left: 160px;
-  top: 250px;
+  /* width: 100.375rem;
+  height: 43.125rem; */
+  width: 85vw;
+  height: 35vw;
+  left: 7vw;
+  top: 15.625rem;
 
   background: url(/home/moon/gitWorkspace/styleStudio-main/site/src/assets/aiyo.jpg);
   background-size: cover;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 83px;
+  border-radius: 5.188rem;
 }
 
 .discountInfo {
   position: absolute;
-  width: 440px;
+  width: 30vw;
   height: 184px;
-  left: 100px;
-  top: 90px;
+  left: 5vw;
+  top: 5vw;
 
   font-family: Rosario;
   font-style: normal;
   font-weight: normal;
-  font-size: 72px;
-  line-height: 87px;
+  font-size: 4vw;
+  line-height: 5vw;
 
   color: #411e1e;
 }
 
 .quote {
   position: absolute;
-  width: 457px;
-  height: 434px;
-  left: 1200px;
+  width: 25vw;
+  height: 10vw;
+  left: 63vw;
   top: 100px;
 
   font-family: Sacramento;
   font-style: normal;
   font-weight: normal;
-  font-size: 72px;
-  line-height: 105px;
+  font-size: 3.8vw;
+  line-height: 5vw;
 
   color: #000000;
 }
 
 .shopButton {
   position: absolute;
-  width: 208px;
-  height: 80px;
-  left: 100px;
-  top: 270px;
+  width: 11vw;
+  height: 4vw;
+  left: 5vw;
+  top: 15vw;
 
   background: #f2c1c1;
   border: 1px solid #0e1a8d;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
-  font-size: 30px;
+  font-size: 1.6vw;
   font-family: fantasy;
-  padding: 15px 38px;
+  padding: 1vw 2vw;
   cursor: pointer;
 
   border-radius: 32px;

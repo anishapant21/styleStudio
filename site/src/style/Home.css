@@ -1,6 +1,6 @@
 .home {
   position: absolute;
-  width: 1905px;
+  width: 100%;
   height: 2990px;
 
   background: linear-gradient(180deg, #f2e6e6 0%, rgba(255, 255, 255, 0) 100%),
@@ -10,15 +10,15 @@
 }
 
 .headingMe {
-  padding-top: 100px;
-  padding-left: 600px;
+  padding-top: 6vw;
+  padding-left: 35vw;
   position: absolute;
-  height: 82px;
+  height: 10vw;
 
   font-family: Noto Serif;
   font-style: normal;
   font-weight: 200;
-  font-size: 56px;
+  font-size: 3vw;
   line-height: 92px;
 
   color: #000000;

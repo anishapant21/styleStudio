@@ -12,7 +12,7 @@ const WishMenu = ({ items }) => {
   });
 
   return (
-    <div style={{ marginTop: "150px" }}>
+    <div style={{ marginTop: "1vw" }}>
       <SimpleGrid columns={4} rowGap={20}>
         {renderedListAgain}
       </SimpleGrid>

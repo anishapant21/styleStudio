@@ -29,7 +29,7 @@ const ProductDetail = () => {
       <Navbar />
       <span
         style={{
-          marginTop: "230px",
+          marginTop: "7vw",
           position: "absolute",
           marginLeft: "70px",
           backgroundColor: "#F2B3B3",

@@ -1,14 +1,14 @@
 .heading {
   position: absolute;
-  width: 462px;
-  height: 82px;
-  left: 807px;
-  top: 1020px;
+  width: 50vw;
+  height: 20vw;
+  left: 45vw;
+  top: 55vw;
 
   font-family: Noto Serif SC;
   font-style: normal;
   font-weight: 200;
-  font-size: 60px;
+  font-size: 3vw;
   line-height: 92px;
 
   color: #000000;
@@ -19,24 +19,24 @@
 }
 
 .car {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 1200px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 55vw;
 }
 
 .cartList {
-  width: 650px;
-  height: 708px;
-  left: 281px;
-  top: 1183px;
-  padding-left: 100px;
+  width: 35vw;
+  height: 38vw;
+  left: 20vw;
+  top: 50vw;
+  padding-left: 5vw;
   background-size: 80ch 70ch;
   box-shadow: 4px 15px 4px rgba(0, 0, 0, 0.25);
 }
 
 .image-here {
-  padding-top: 10px;
-  min-height: 650px;
+  padding-top: 0.5vw;
+  min-height: 35vw;
 }
 
 /* @media (max-width: 768px) {

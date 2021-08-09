@@ -23,7 +23,6 @@ const Slider = () => {
       <div className="quote">
         Feel the summer <b />
         with
-        <b />
         some colors
       </div>
     </div>
